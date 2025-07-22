@@ -1,6 +1,4 @@
-// script.js
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Theme Switcher ---
     const themeSwitch = document.getElementById('checkbox');
     const currentTheme = localStorage.getItem('theme');
 
@@ -20,9 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'light-mode');
         }
     });
-
-
-    // --- Form Validation Logic (unchanged) ---
     const form = document.getElementById('prediction-form');
     const resultElement = document.getElementById('result');
     const formErrorMessage = document.getElementById('form-error-message');
@@ -133,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (validateForm()) {
             // Placeholder result
-            resultElement.innerText = '$12,345.67'; // Example placeholder
+            resultElement.innerText = '$12,345.67'; 
             formErrorMessage.style.display = 'none';
         } else {
             resultElement.innerText = '$---';
@@ -141,8 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
             formErrorMessage.style.display = 'block';
         }
     });
-
-    // Real-time validation feedback on input change
     Object.values(inputs).forEach(input => {
         if (Array.isArray(input) || input instanceof NodeList) { // Handle radio buttons as a group
              inputs.smoker.forEach(radio => {
