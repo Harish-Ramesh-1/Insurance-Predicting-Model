@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Insurance Cost Prediction</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <header>
+        <nav>
+            <a href="#" class="logo">MediCost Predict</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="prediction-container">
+            <div class="prediction-content">
+                <h1>Predict Your Annual Health Insurance Cost</h1>
+                <p class="tagline">Get an estimate of your annual health insurance premium with our advanced prediction tool.</p>
+                <form id="prediction-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="age"><i class="fas fa-user"></i> Age</label>
+                            <input type="number" id="age" name="age" placeholder="e.g., 35" required>
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender"><i class="fas fa-venus-mars"></i> Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="bmi"><i class="fas fa-weight-scale"></i> BMI</label>
+                            <input type="number" step="0.1" id="bmi" name="bmi" placeholder="e.g., 22.5" required>
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="children"><i class="fas fa-baby"></i> Number of Children</label>
+                            <input type="number" id="children" name="children" placeholder="e.g., 2" required>
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-smoking"></i> Smoker</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="smoker" value="yes" required> Yes</label>
+                                <label><input type="radio" name="smoker" value="no"> No</label>
+                            </div>
+                            <small class="error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="region"><i class="fas fa-map-marker-alt"></i> Region</label>
+                            <select id="region" name="region" required>
+                                <option value="" disabled selected>Select Region</option>
+                                <option value="southeast">Southeast</option>
+                                <option value="southwest">Southwest</option>
+                                <option value="northeast">Northeast</option>
+                                <option value="northwest">Northwest</option>
+                            </select>
+                            <small class="error-message"></small>
+                        </div>
+                    </div>
+                    <button type="submit" class="cta-button">Calculate Charges</button>
+                </form>
+                <div class="result-container">
+                    <h2>Predicted Annual Insurance Cost:</h2>
+                    <p id="result">$---</p>
+                </div>
+                <p id="form-error-message" class="error-message" style="display: none;"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 MediCost Predict. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
